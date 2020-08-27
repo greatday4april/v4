@@ -1,3 +1,7 @@
+## TODOs
+
+1. Add github stats using api https://api.github.com/users/greatday4april
+
 ## 🛠 Installation & Set Up
 
 1. Install the Gatsby CLI

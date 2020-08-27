@@ -5,15 +5,14 @@ skills:
   - JavaScript (ES6+)
   - HTML & (S)CSS
   - React
-  - Vue
   - Node.js
-  - WordPress
 ---
 
-Hello! I'm Brittany, a software engineer based in Boston, MA.
+Hello! I'm April, a software engineer and entrepreneur based in San Francisco Bay.
 
 I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.
 
-Shortly after graduating from [Northeastern University](https://www.ccis.northeastern.edu/), I joined the engineering team at [Upstatement](https://www.upstatement.com/) where I work on a wide variety of interesting and meaningful projects on a daily basis.
+I founded Elephant Box earlier this year and got the chance to lead a passionate team to build a bunch of
+interesting and meaningful things. I'm also pursuing my Master degree of Computer Science at New Jersey Institute of Technology and expect to graduate Spring 2022.
 
 Here are a few technologies I've been working with recently:

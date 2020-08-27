@@ -1,13 +1,14 @@
-import React, { useRef, useEffect } from 'react';
-import { graphql } from 'gatsby';
+import { Main, media, mixins, theme } from '@styles';
+import React, { useEffect, useRef } from 'react';
+
+import { FormattedIcon } from '@components/icons';
 import { Helmet } from 'react-helmet';
+import { Layout } from '@components';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
-import { Layout } from '@components';
-import { FormattedIcon } from '@components/icons';
 import styled from 'styled-components';
-import { theme, mixins, media, Main } from '@styles';
 const { colors, fonts, fontSizes } = theme;
 
 const StyledMainContainer = styled(Main)``;
@@ -235,8 +236,6 @@ export const pageQuery = graphql`
             tech
             github
             external
-            ios
-            android
             company
           }
           html

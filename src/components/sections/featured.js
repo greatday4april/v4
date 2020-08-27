@@ -1,11 +1,13 @@
+import { Heading, Section, media, mixins, theme } from '@styles';
 import React, { useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
+
+import { FormattedIcon } from '@components/icons';
 import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
-import { FormattedIcon } from '@components/icons';
 import styled from 'styled-components';
-import { theme, mixins, media, Section, Heading } from '@styles';
+
 const { colors, fontSizes, fonts } = theme;
 
 const StyledContainer = styled(Section)`
@@ -107,8 +109,9 @@ const StyledLinkWrapper = styled.div`
   }
 `;
 const StyledFeaturedImg = styled(Img)`
-  width: 100%;
-  max-width: 100%;
+  width: auto;
+  height: 100%;
+  max-height: 100%;
   vertical-align: middle;
   border-radius: ${theme.borderRadius};
   position: relative;
@@ -159,6 +162,7 @@ const StyledImgContainer = styled.a`
     mix-blend-mode: screen;
   }
 `;
+
 const StyledProject = styled.div`
   display: grid;
   grid-gap: 10px;
@@ -194,7 +198,7 @@ const StyledProject = styled.div`
       margin-right: -10px;
     }
     ${StyledImgContainer} {
-      grid-column: 1 / 8;
+      grid-column: ${`1 / 8`};
       ${media.tablet`height: 100%;`};
       ${media.thone`
         grid-column: 1 / -1;
@@ -222,12 +226,12 @@ const Featured = ({ data }) => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover } = frontmatter;
+            const { external, title, tech, github, cover, appstores } = frontmatter;
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <StyledContent>
-                  <StyledLabel>Featured Project</StyledLabel>
+                  <StyledLabel>Featured App</StyledLabel>
                   <StyledProjectName>
                     {external ? (
                       <a
@@ -259,6 +263,17 @@ const Featured = ({ data }) => {
                         <FormattedIcon name="GitHub" />
                       </a>
                     )}
+                    {appstores &&
+                      appstores.map((appstore, index) => (
+                        <a
+                          href={appstore}
+                          key={index}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                          aria-label="AppStore Link">
+                          <FormattedIcon name="AppStore" />
+                        </a>
+                      ))}
                     {external && (
                       <a
                         href={external}

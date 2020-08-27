@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { mixins, theme } from '@styles';
+
 import Helmet from 'react-helmet';
+import { IconLoader } from '@components/icons';
 import PropTypes from 'prop-types';
 import anime from 'animejs';
-import { IconLoader } from '@components/icons';
 import styled from 'styled-components';
-import { theme, mixins } from '@styles';
+
 const { colors } = theme;
 
 const StyledContainer = styled.div`
@@ -31,7 +33,7 @@ const StyledLogo = styled.div`
     margin: 0 auto;
     fill: none;
     user-select: none;
-    #B {
+    #A {
       opacity: 0;
     }
   }
@@ -52,7 +54,7 @@ const Loader = ({ finishLoading }) => {
         strokeDashoffset: [anime.setDashoffset, 0],
       })
       .add({
-        targets: '#logo #B',
+        targets: '#logo #A',
         duration: 700,
         easing: 'easeInOutQuart',
         opacity: 1,

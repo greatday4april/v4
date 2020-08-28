@@ -7,6 +7,7 @@ appstores:
     'https://apps.apple.com/us/app/blismo/id1429582592',
     'https://apps.apple.com/us/app/blisness/id1527357741',
   ]
+external: 'https://apps.apple.com/us/app/blismo/id1429582592'
 tech:
   - Flutter
   - Firebase

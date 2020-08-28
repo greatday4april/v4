@@ -3,7 +3,7 @@ date: '0'
 title: 'Pointer.ai'
 cover: './demo.png'
 github: 'https://github.com/greatday4april'
-external: 'https://www.pointer.ai/'
+external: 'https://pointer.ai/'
 tech:
   - React (Hook)
   - Django

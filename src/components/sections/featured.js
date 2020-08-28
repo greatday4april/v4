@@ -226,7 +226,16 @@ const Featured = ({ data }) => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, appstores } = frontmatter;
+            const {
+              external,
+              title,
+              tech,
+              github,
+              cover,
+              appstores,
+              googleplays,
+              disableExternalIcon,
+            } = frontmatter;
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
@@ -274,7 +283,18 @@ const Featured = ({ data }) => {
                           <FormattedIcon name="AppStore" />
                         </a>
                       ))}
-                    {external && (
+                    {googleplays &&
+                      googleplays.map((googleplays, index) => (
+                        <a
+                          href={googleplays}
+                          key={index}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                          aria-label="PlayStore Link">
+                          <FormattedIcon name="PlayStore" />
+                        </a>
+                      ))}
+                    {external && !disableExternalIcon && (
                       <a
                         href={external}
                         target="_blank"

@@ -12,4 +12,4 @@ tech:
 showInProjects: true
 ---
 
-A ML-based web app that generates optimal learning plan based on evaluation of user abilities and goals
+A ML-based web app that generates optimal learning plan based on evaluation of user abilities and goals.

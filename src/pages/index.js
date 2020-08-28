@@ -98,7 +98,9 @@ export const pageQuery = graphql`
             tech
             github
             appstores
+            googleplays
             external
+            disableExternalIcon
           }
           html
         }

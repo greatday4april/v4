@@ -5,4 +5,4 @@ subtitle: 'I love building things head to toe.'
 buttonText: 'Get In Touch'
 ---
 
-I'm a software engineer and entrepreneur in San Francisco Bay, specializing in building exceptional websites, mobile applications, and machine learning stuff.
+I'm a full-stack software engineer and startup founder in San Francisco Bay, specializing in building exceptional websites, mobile applications, and machine learning stuff.

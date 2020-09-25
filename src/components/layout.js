@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import PropTypes from 'prop-types';
-import { Head, Loader, Nav, Social, Email, Footer } from '@components';
-import styled from 'styled-components';
+import { Email, Footer, Head, Loader, Nav, Social } from '@components';
 import { GlobalStyle, theme } from '@styles';
+import React, { useEffect, useState } from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+
+import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
+import ogImage from '../../content/site-screenshot.png';
+import styled from 'styled-components';
+
 const { colors, fontSizes, fonts } = theme;
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
@@ -83,6 +87,9 @@ const Layout = ({ children, location }) => {
       render={({ site }) => (
         <div id="root">
           <Head metadata={site.siteMetadata} />
+          <Helmet>
+            <meta property="og:image" content={ogImage} />
+          </Helmet>
 
           <GlobalStyle />
 

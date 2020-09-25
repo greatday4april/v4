@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'April Li | Software Engineer',
+  siteTitle: 'April Li | Portfolio',
   siteDescription: 'April Li is a software engineer and entrepreneur based in San Francisco Bay',
   siteKeywords: 'April Li, Elephant Box, elephant-box, software engineer, full stack, frontend',
   siteUrl: 'https://www.april-li.com',

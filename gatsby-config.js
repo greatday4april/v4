@@ -5,6 +5,8 @@ module.exports = {
     title: config.siteTitle,
     siteUrl: config.siteUrl,
     description: config.siteDescription,
+    image: '/content/site-screenshot.png',
+    author: 'April Li'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
